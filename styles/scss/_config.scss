@@ -1,0 +1,15 @@
+$font-stack: 'Montserrat', sans-serif;;
+$light-color: #f4f4f4;
+// $primary-color: #0a60eb;
+$primary-color: #3e0c8f;
+$secondary-color: #f09b3a;
+
+// Set text color based on background
+@function set-text-color($color) {
+    @if(lightness($color) > 70) {
+        @return #333;
+    } @else {
+        @return #fff;
+    }
+}
+

@@ -1,0 +1,122 @@
+@import "config";
+@import "utilities";
+@import "buttons";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: $light-color;
+  font-family: $font-stack;
+  line-height: 1.6;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.showcase {
+  @include set-background($primary-color);
+  height: 600px;
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    .nav-list {
+      display: flex;
+      list-style: none;
+    }
+
+    .nav-item {
+      padding: 15px;
+
+      a {
+        color: set-text-color($primary-color);
+      }
+      a:hover {
+        color: $secondary-color;
+      }
+    }
+    #menu-btn {
+      display: none;
+    }
+    .menu-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      span {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 300ms;
+        transform-origin: center;
+        border-radius: 2px;
+      }
+
+      &.open {
+        span:first-child {
+          transform: translateX(-5px);
+        }
+        span:nth-child(2) {
+          transform: translateX(-15px);
+          opacity: 0.7;
+        }
+        span:last-child {
+          transform: translateX(-23px);
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+
+  &-content {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+
+    img {
+      width: 50%;
+    }
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+    }
+  }
+}
+
+.services {
+  height: 500px;
+  width: 100%;
+  @include flex; 
+
+  .services-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: stretch;
+    align-items: stretch;
+
+    .service-card {
+      height: 300px;
+      width: 300px;
+      border: 1px solid;
+    }
+  }
+}
+
+// Mobile media query
+@import "mobile";
+@import "tab";

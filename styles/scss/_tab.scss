@@ -1,0 +1,54 @@
+@media screen and (min-width: 546px) and (max-width: 680px) {
+  .showcase {
+    height: 400px;
+
+    .navbar {
+      .logo {
+        font-size: 1.5rem;
+      }
+      .nav-list {
+        .nav-item {
+          padding: 5px;
+          a {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+    &-content {
+      margin-top: 30px;
+      text-align: center;
+
+      img {
+        display: none;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      .header-btns {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media screen and (min-width: 681px) and (max-width: 855px) {
+  .showcase {
+      height: 450px;
+    .navbar {
+      .nav-list {
+        .nav-item {
+          padding: 10px;
+        }
+      }
+    }
+    .showcase-content {
+      margin-top: 30px;
+      h1 {
+        font-size: 30px;
+      }
+      p {
+          font-size:.9rem;
+      }
+    }
+  }
+}
